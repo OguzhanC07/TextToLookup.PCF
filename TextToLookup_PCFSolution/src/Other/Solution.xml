@@ -9,19 +9,19 @@
       <LocalizedName description="TextToLookup_PCFSolution" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <!-- Solution Package Type: Unmanaged(0)/Managed(1)/Both(2)-->
     <Managed>2</Managed>
     <Publisher>
       <!-- Unique Publisher Name of Cds Solution -->
-      <UniqueName>Omerd</UniqueName>
+      <UniqueName>omerd</UniqueName>
       <LocalizedNames>
         <!-- Localized Cds Publisher Name in language code-->
-        <LocalizedName description="Omerd" languagecode="1033" />
+        <LocalizedName description="omerd" languagecode="1033" />
       </LocalizedNames>
       <Descriptions>
         <!-- Description of Cds Publisher in language code -->
-        <Description description="Omerd" languagecode="1033" />
+        <Description description="omerd" languagecode="1033" />
       </Descriptions>
       <EMailAddress xsi:nil="true"></EMailAddress>
       <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
