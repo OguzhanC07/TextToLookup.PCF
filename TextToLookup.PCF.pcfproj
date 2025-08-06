@@ -8,8 +8,8 @@
   <Import Project="$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Pcf.props" Condition="Exists('$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Pcf.props')" />
 
   <PropertyGroup>
-    <Name>pcf</Name>
-    <ProjectGuid>dd4e4294-d61f-4398-81d1-4075e67b1110</ProjectGuid>
+    <Name>TextToLookup.PCF</Name>
+    <ProjectGuid>a6382320-8f17-452b-ab02-0de05234fdd0</ProjectGuid>
     <OutputPath>$(MSBuildThisFileDirectory)out\controls</OutputPath>
   </PropertyGroup>
 
