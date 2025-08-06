@@ -87,7 +87,7 @@ export class TextToLookup implements ComponentFramework.StandardControl<IInputs,
 		this._entityRecordId = contextPage.entityId;
 		this._entityRecordName = contextPage.entityTypeName;
 
-		this._isFake = true;
+		this._isFake = false;
 
 		this._populatedFieldVisible = this._context.parameters.populatedFieldVisible.raw || "False";
 		this.props.populatedFieldVisible = this._populatedFieldVisible == "True" ? true : false;
@@ -123,7 +123,7 @@ export class TextToLookup implements ComponentFramework.StandardControl<IInputs,
 		const contextPage = (context as any).page;
 		this._entityRecordId = contextPage.entityId || "";
 		this._entityRecordName = contextPage.entityTypeName;
-		this._isFake = true;
+		this._isFake = false;
 		this._populatedFieldVisible = this._context.parameters.populatedFieldVisible.raw || "False";
 		this.props.populatedFieldVisible = this._populatedFieldVisible == "True" ? true : false;
 		this.props.logicalName = this._context.parameters.entityName.raw || "";
