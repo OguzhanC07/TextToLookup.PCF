@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="TextToLookup.PCF" constructor="TextToLookup" version="0.0.1" display-name-key="TextToLookup" description-key="TextToLookup description" control-type="standard">
+
+    <!-- Property node identifies a specific, configurable piece of data that the control expects from CDS -->
+    <property name="selectedValue" display-name-key="SelectedValue_Display_Key" description-key="SelectedValue_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="fetchXml" display-name-key="FetchXml_Display_Key" description-key="FetchXml_Desc_Key" of-type="SingleLine.Text" usage="input" required="true" />
+
+    <!-- Resources node identifies the web resources required by the control -->
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="css/TextToLookup.css" order="1"/>
+    </resources>
+
+  </control>
+</manifest>

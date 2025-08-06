@@ -1,0 +1,287 @@
+/* Text to Lookup Component Styles */
+.text-lookup-container {
+    position: relative;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Input Wrapper */
+.text-lookup-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #d1d1d1;
+    border-radius: 2px;
+    min-height: 32px;
+    transition: all 0.15s ease-in-out;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.text-lookup-input-wrapper:hover {
+    border-color: #0078d4;
+}
+
+.text-lookup-input-wrapper:focus-within {
+    border-color: #0078d4;
+    box-shadow: 0 0 0 1px #0078d4;
+}
+
+/* Search Icon */
+.text-lookup-search-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    color: #666666;
+    pointer-events: none;
+    flex-shrink: 0;
+}
+
+/* Loading Spinner */
+.text-lookup-spinner {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    flex-shrink: 0;
+}
+
+.text-lookup-spinner svg {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Text Input */
+.text-lookup-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 6px 8px;
+    font-size: 14px;
+    color: #323130;
+    background: transparent;
+    line-height: 20px;
+    min-width: 0;
+}
+
+.text-lookup-input::placeholder {
+    color: #a19f9d;
+    font-style: italic;
+}
+
+.text-lookup-input.has-value {
+    color: #323130;
+    font-weight: 400;
+}
+
+/* Clear Button */
+.text-lookup-clear-btn {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 4px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 0;
+    flex-shrink: 0;
+    transition: background-color 0.15s ease-in-out;
+}
+
+.text-lookup-clear-btn:hover {
+    background-color: #f3f2f1;
+}
+
+.text-lookup-clear-btn:active {
+    background-color: #edebe9;
+}
+
+/* Dropdown Container */
+.text-lookup-dropdown-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border: 1px solid #d1d1d1;
+    border-top: none;
+    border-radius: 0 0 2px 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+}
+
+.text-lookup-dropdown-container.open {
+    display: block;
+}
+
+/* Dropdown List */
+.text-lookup-dropdown {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dropdown Items */
+.text-lookup-dropdown-item {
+    cursor: pointer;
+    border-bottom: 1px solid #f3f2f1;
+    transition: background-color 0.15s ease-in-out;
+    padding: 0;
+}
+
+.text-lookup-dropdown-item:hover {
+    background-color: #f3f2f1;
+}
+
+.text-lookup-dropdown-item:active {
+    background-color: #edebe9;
+}
+
+.text-lookup-dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.text-lookup-dropdown-item.no-results {
+    cursor: default;
+    color: #a19f9d;
+}
+
+.text-lookup-dropdown-item.no-results:hover {
+    background-color: transparent;
+}
+
+/* Item Content */
+.text-lookup-item-content {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    min-height: 36px;
+}
+
+/* Item Icon */
+.text-lookup-item-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+/* Item Name */
+.text-lookup-item-name {
+    font-size: 14px;
+    color: #323130;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Scrollbar Styling for Dropdown */
+.text-lookup-dropdown-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.text-lookup-dropdown-container::-webkit-scrollbar-track {
+    background: #f3f2f1;
+}
+
+.text-lookup-dropdown-container::-webkit-scrollbar-thumb {
+    background: #c8c6c4;
+    border-radius: 4px;
+}
+
+.text-lookup-dropdown-container::-webkit-scrollbar-thumb:hover {
+    background: #a19f9d;
+}
+
+/* Disabled State */
+.text-lookup-container.disabled .text-lookup-input-wrapper {
+    background-color: #f3f2f1;
+    border-color: #d1d1d1;
+    cursor: not-allowed;
+}
+
+.text-lookup-container.disabled .text-lookup-input {
+    color: #a19f9d;
+    cursor: not-allowed;
+}
+
+.text-lookup-container.disabled .text-lookup-search-icon {
+    color: #a19f9d;
+}
+
+/* Focus States */
+.text-lookup-input:focus {
+    outline: none;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .text-lookup-input-wrapper {
+        border-color: #000000;
+        background-color: #ffffff;
+    }
+
+    .text-lookup-input-wrapper:focus-within {
+        border-color: #0078d4;
+        box-shadow: 0 0 0 2px #0078d4;
+    }
+
+    .text-lookup-dropdown-container {
+        border-color: #000000;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .text-lookup-dropdown-item:hover {
+        background-color: #0078d4;
+        color: #ffffff;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .text-lookup-dropdown-container {
+        max-height: 150px;
+    }
+
+    .text-lookup-item-content {
+        padding: 10px 12px;
+        min-height: 40px;
+    }
+}
+
+/* Animation for Dropdown */
+.text-lookup-dropdown-container {
+    animation: fadeIn 0.15s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
